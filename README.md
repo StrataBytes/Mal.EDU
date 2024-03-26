@@ -48,7 +48,7 @@ This project is designed as an educational exercise for understanding and practi
 
 - Somewhat easy to find if the user knows to look for it in startup or task scheduler.
 - Cannot recover from deletion.
-- Every once in a while, it can trip Windows Defender due to the nature of an EXE built in pyinstaller, causing WD to delete it instantly.
+- Every once in a while, it can trip Windows Defender due to the nature of an EXE built in pyinstaller, causing WD to delete it instantly. It will also sometimes get flagged due to evasion behavior.
   - To fix, build the raw script (with pyinstaller) on the exercise computer making it no longer a forign application.
 
 ## Manual Building
