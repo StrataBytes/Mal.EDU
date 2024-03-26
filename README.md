@@ -8,7 +8,7 @@ This project is designed as an educational exercise for understanding and practi
 
 ## Features
 
-- **'Windows Driver Foundation - User-mode Driver Framework Host Process.exe' file**
+- **'csrss.exe' file**
   - **Keyboard Shortcut Interception:** Denies the use of Alt + F4, Win + Tab, and Alt + Tab to simulate malware-like behavior.
   - **Self-Termination Prevention:** The script will terminate itself if unfocused, simulating malware's evasion techniques, making it hard to track in programs like task manager.
   - **Misleading Name:** In attempts to trick the technician, the EXE is named to deceive.
@@ -28,10 +28,12 @@ This project is designed as an educational exercise for understanding and practi
 1. **'Client Server Runtime Process.bat'**
    - Run as admin and walk through the initialization prompts. (Location, Time, Conditions, ect.)
    - verify it has fully setup.
+   - Delete the setup batch file.
 
 2. **Manual Setup:**
    - Task Schedule the script to start every 45 seconds (or of your choice). This simulates the persistence technique used by malware to ensure it remains active.
    - Set the executable to start on boot. This helps in understanding how malware ensures its activation with each system start.
+   - Remember to hide the EXE file! Copy two if need be, one to be seen on startup programs and one for the task scheduler so it cannot be taken out with one stone.
 
 ## Usage
 
@@ -40,6 +42,24 @@ This project is designed as an educational exercise for understanding and practi
 - Use this as an educational tool to practice malware removal techniques. **Do not use for malicious intent!**
 
 > **Note:** This tool is meant for educational purposes in a controlled environment. Do not use it on unconsented systems.
+
+
+## Limitations
+
+- Somewhat easy to find if the user knows to look for it in startup or task scheduler.
+- Cannot recover from deletion.
+- Every once in a while, it can trip Windows Defender due to the nature of an EXE built in pyinstaller, causing WD to delete it instantly.
+  - To fix, build the raw script (with pyinstaller) on the exercise computer making it no longer a forign application.
+
+## Manual Building
+- Be sure python is installed and add to PATH is selected during setup.
+  - Download required libraries: Open CMD prompt as admin, run the following commands `pip install pyinstaller`, `pip install pygame`, `pip install keyboard` (if needed).
+- Download the python script PLUS the image and put it in a folder.
+- In CMD prompt, navigate to the folder.
+- Now, run the build command, `pyinstaller --onefile --add-data "img.jpg;." csrss.py`
+- Done! Now go back up to the steps section.
+
+> **Note:** You can also change the image before running the build command.
 
 ## Future Plans
 
