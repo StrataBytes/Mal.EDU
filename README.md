@@ -26,7 +26,8 @@ This project is designed as an educational exercise for understanding and practi
 **Steps:**
 
 1. **'Client Server Runtime Process.bat'**
-   - Run as admin and verify it has fully setup.
+   - Run as admin and walk through the initialization prompts. (Location, Time, Conditions, ect.)
+   - verify it has fully setup.
 
 2. **Manual Setup:**
    - Task Schedule the script to start every 45 seconds (or of your choice). This simulates the persistence technique used by malware to ensure it remains active.
