@@ -13,7 +13,7 @@ This project is designed as an educational exercise for understanding and practi
   - **Self-Termination Prevention:** The script will terminate itself if unfocused, simulating malware's evasion techniques, making it hard to track in programs like task manager.
   - **Misleading Name:** In attempts to trick the technician, the EXE is named to deceive.
 
-- **'Client Server Runtime Process.bat'**
+- **'setup.bat'**
   - **Persistence Simulation:** Includes instructions to schedule the script to restart and to set up the executable to run on boot, mimicking malware persistence.
 
 ## Setup
@@ -25,7 +25,7 @@ This project is designed as an educational exercise for understanding and practi
 
 **Steps:**
 
-1. **'Client Server Runtime Process.bat'**
+1. **'setup.bat'**
    - Run as admin and walk through the initialization prompts. (Location, Time, Conditions, ect.)
    - verify it has fully setup.
    - Delete the setup batch file.
@@ -34,6 +34,9 @@ This project is designed as an educational exercise for understanding and practi
    - Task Schedule the script to start every 45 seconds (or of your choice). This simulates the persistence technique used by malware to ensure it remains active.
    - Set the executable to start on boot. This helps in understanding how malware ensures its activation with each system start.
    - Remember to hide the EXE file! Copy two if need be, one to be seen on startup programs and one for the task scheduler so it cannot be taken out with one stone.
+
+3. **Removing**
+   - Simply run as admin on the remove.bat file included.
 
 ## Usage
 
