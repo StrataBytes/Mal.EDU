@@ -18,7 +18,7 @@ This project is designed as an educational exercise for understanding and practi
 
 ## Setup
 
-**Pre-requisites:**
+**Pre-requisites, for better result, but not required:**
 
 - Ensure Python is installed on your system with pyinstaller (`pip install pyinstaller`) to not trigger Windows antivirus.
   - Adding an exception to the antivirus will point the technician to the script, making it easier to find - not recommended.
@@ -74,4 +74,4 @@ Contributions to improve the tool or extend its functionalities for educational 
 
 ## License
 
-This project is licensed under the GPL 2.0. See the LICENSE file for more details.
+This project is licensed under the GPLv3. See the LICENSE file for more details.
