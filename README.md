@@ -1,6 +1,6 @@
 # Mal.EDU - Educational Malware Removal Exercise Tool
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) <br>
-**Author:** Stratabytes
+**Author:** StrataBytes
 
 ## Introduction
 
@@ -13,19 +13,19 @@ This project is designed as an educational exercise for understanding and practi
   - **Self-Termination Prevention:** The script will terminate itself if unfocused, simulating malware's evasion techniques, making it hard to track in programs like task manager.
   - **Misleading Name:** In attempts to trick the technician, the EXE is named to deceive.
 
-- **'Client Server Runtime Process.bat'**
+- **'setup.bat'**
   - **Persistence Simulation:** Includes instructions to schedule the script to restart and to set up the executable to run on boot, mimicking malware persistence.
 
 ## Setup
 
-**Pre-requisites:**
+**Pre-requisites, for better result, but not required:**
 
-- Ensure Python is installed on your system with pyinstaller (`pip install pyinstaller`) to not trigger Windows antivirus.
-  - Adding an exception to the antivirus will point the technician to the script, making it easier to find - not recommended.
+- Ensure Python is installed on your system with pyinstaller (`pip install pyinstaller`) to help reduce triggering Windows antivirus.
+  - Adding an exception to the antivirus will point the technician to the script, making it easier to find - not recommended, however it may be needed.
 
 **Steps:**
 
-1. **'Client Server Runtime Process.bat'**
+1. **'setup.bat'**
    - Run as admin and walk through the initialization prompts. (Location, Time, Conditions, ect.)
    - verify it has fully setup.
    - Delete the setup batch file.
@@ -34,6 +34,9 @@ This project is designed as an educational exercise for understanding and practi
    - Task Schedule the script to start every 45 seconds (or of your choice). This simulates the persistence technique used by malware to ensure it remains active.
    - Set the executable to start on boot. This helps in understanding how malware ensures its activation with each system start.
    - Remember to hide the EXE file! Copy two if need be, one to be seen on startup programs and one for the task scheduler so it cannot be taken out with one stone.
+
+3. **Removing**
+   - Simply run as admin on the remove.bat file included.
 
 ## Usage
 
@@ -56,7 +59,7 @@ This project is designed as an educational exercise for understanding and practi
   - Download required libraries: Open CMD prompt as admin, run the following commands `pip install pyinstaller`, `pip install pygame`, `pip install keyboard` (if needed).
 - Download the python script PLUS the image and put it in a folder.
 - In CMD prompt, navigate to the folder.
-- Now, run the build command, `pyinstaller --onefile --add-data "img.jpg;." csrss.py`
+- Now, run the build command, `pyinstaller --onefile --noconsole --add-data "img.jpg;." --icon=icon.ico csrss.py`
 - Done! Now go back up to the steps section.
 
 > **Note:** You can also change the image before running the build command.
@@ -71,4 +74,4 @@ Contributions to improve the tool or extend its functionalities for educational 
 
 ## License
 
-This project is licensed under the GPL 2.0. See the LICENSE file for more details.
+This project is licensed under the GPLv3. See the LICENSE file for more details.
