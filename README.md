@@ -20,8 +20,8 @@ This project is designed as an educational exercise for understanding and practi
 
 **Pre-requisites, for better result, but not required:**
 
-- Ensure Python is installed on your system with pyinstaller (`pip install pyinstaller`) to not trigger Windows antivirus.
-  - Adding an exception to the antivirus will point the technician to the script, making it easier to find - not recommended.
+- Ensure Python is installed on your system with pyinstaller (`pip install pyinstaller`) to help reduce triggering Windows antivirus.
+  - Adding an exception to the antivirus will point the technician to the script, making it easier to find - not recommended, however it may be needed.
 
 **Steps:**
 
