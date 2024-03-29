@@ -59,7 +59,7 @@ This project is designed as an educational exercise for understanding and practi
   - Download required libraries: Open CMD prompt as admin, run the following commands `pip install pyinstaller`, `pip install pygame`, `pip install keyboard` (if needed).
 - Download the python script PLUS the image and put it in a folder.
 - In CMD prompt, navigate to the folder.
-- Now, run the build command, `pyinstaller --onefile --add-data "img.jpg;." csrss.py`
+- Now, run the build command, `pyinstaller --onefile --add-data "img.jpg;." --icon=icon.ico csrss.py`
 - Done! Now go back up to the steps section.
 
 > **Note:** You can also change the image before running the build command.
