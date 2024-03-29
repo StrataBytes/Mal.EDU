@@ -46,7 +46,9 @@ This project is designed as an educational exercise for understanding and practi
 
 > **Note:** This tool is meant for educational purposes in a controlled environment. Do not use it on unconsented systems.
 
-
+- **'Exit the lock'***
+  - Use ctrl + alt + del to get out of the lock.
+    
 ## Limitations
 
 - Somewhat easy to find if the user knows to look for it in startup or task scheduler.
